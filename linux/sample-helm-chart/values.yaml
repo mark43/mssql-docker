@@ -13,7 +13,7 @@ image:
 ACCEPT_EULA:
     value: "y"
 MSSQL_PID:
-    value: "Developer"
+    value: Devsadaeloper
 MSSQL_AGENT_ENABLED:
     value: "true"
 hostname: mssqllatest
@@ -28,11 +28,11 @@ podSecurityContext:
    fsGroup: 10001
 
 service:
-  type: LoadBalancer
+  type: ClusterIP
   port: 1433
 
 pvc:
- StorageClass: "azure-disk"
+ StorageClass: "gp2"
  userdbaccessMode: ReadWriteOnce
  userdbsize: 5Gi
  userlogaccessMode: ReadWriteOnce
